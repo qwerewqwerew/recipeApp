@@ -1,14 +1,33 @@
 import { useState, useEffect } from 'react';
+import { fetchDb } from './fetch';
+
 function App() {
 	const [loading, setLoading] = useState({ state: true, data: [] });
-	console.log(loading);
 	useEffect(() => {
-		//레시피데이터로딩
+		const loadDB = async () => {
+			const data = await fetchDb();
+			setLoading({ state: false, data: data });
+		};
 		setTimeout(() => {
-			setLoading(false);
+			loadDB();
 		}, 500);
 	}, []);
-	return <div className='App'>{loading ? <h1>로딩중입니다...</h1> : <h1> 요리에몽</h1>}</div>;
+	//console.log(loading.data);
+
+	return (
+		<div className='App'>
+			{loading.state ? (
+				<h1>로딩중입니다...</h1>
+			) : (
+				loading.data.map((a) => (
+					<div key={a.id}>
+						<span>{a.title}</span>
+						<span>{a.userId}</span>
+					</div>
+				))
+			)}
+		</div>
+	);
 }
 
 export default App;
