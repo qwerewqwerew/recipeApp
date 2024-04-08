@@ -1,0 +1,10 @@
+@import url(https://qwerewqwerew.github.io/source/style/reset.css);
+.inner {
+  width: min(800px, 80%);
+  margin: auto;
+}
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
