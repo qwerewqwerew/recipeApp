@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Recipe from './components/Recipe';
+
+import ListGroup from './components/ListGroup';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -37,12 +38,8 @@ function App() {
 			{loading ? (
 				<h1>로딩중입니다...</h1>
 			) : (
-				<div className="inner">
-					<div className='group'>
-						{data.map(({ id, name, imgs: { main_s, main_l } }) => {
-							return <Recipe key={id} name={name} img_s={main_s} img_l={main_l} />;
-						})}
-					</div>
+				<div className='inner'>
+					<ListGroup data={data} />
 				</div>
 			)}
 		</div>

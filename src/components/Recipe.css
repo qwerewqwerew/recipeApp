@@ -3,15 +3,28 @@
   flex-direction: column;
   width: min(25%, 20rem);
 }
-img{
+img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-span {
-  padding:.5vw 0 1vw;
+.text_wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5vw 0 1vw;
+}
+.title_txt {
   font-size: 1vw;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555;
+}
+.sub_txt {
+  background: #555;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
   white-space: nowrap;
 }
