@@ -10,8 +10,5 @@ img {
 }
 span {
   padding: .5vw 0 1vw;
-  font-size: 1vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
 }
