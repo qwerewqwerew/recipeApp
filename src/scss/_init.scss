@@ -1,0 +1,80 @@
+@import url(https://qwerewqwerew.github.io/source/style/reset.css);
+$mobile: 568px;
+$tablet: 768px;
+$desktop: 992px;
+$breakpoints: (
+	'sm': (
+		min-width: $mobile,
+	),
+	'md': (
+		min-width: $tablet,
+	),
+	'lg': (
+		min-width: $desktop,
+	),
+);
+
+@mixin media($size) {
+	$query: map-get($breakpoints, $size);
+	$min-width: map-get($query, min-width);
+	@media (min-width: #{$min-width}) {
+		@content;
+	}
+}
+@mixin fx($d: row, $just: space-evenly, $align: center, $g: 1rem) {
+	display: flex;
+	flex-direction: $d;
+	justify-content: $just;
+	align-items: $align;
+	gap: $g;
+	@content;
+}
+@mixin item($a, $b, $c) {
+	flex: $a $b $c;
+	@content;
+}
+@mixin padding($l: auto, $t: auto, $r: auto, $b: auto) {
+	padding-left: $l;
+	padding-top: $t;
+	padding-right: $r;
+	padding-bottom: $b;
+}
+@mixin align($a: center) {
+	text-align: $a;
+	@content;
+}
+
+$primary: #70b9be;
+$text1: #0a2533;
+$text2: #353535;
+$stroke: #e6ebf2;
+$bg: #f1f5f5;
+$grayl: hsl(214, 14%, 64%);
+$gray2: #748189;
+$white: #fff;
+$black: #000;
+$shade7: #709799;
+$shade6: #5f8486;
+$shade5: #52696b;
+$shade4: #435556;
+$shade3: #313e3f;
+$shade2: #222a2a;
+$shade1: #101314;
+$tint1: #a5babb;
+$tint2: #d5dcdd;
+$tint3: #fafafa;
+$n10: 10;
+$xunit: 100vw;
+
+html,
+a {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Pretendard', sans-serif;
+}
+body,
+a {
+	line-height: 1.7;
+	font-size: 1.6rem;
+	text-decoration: none;
+}

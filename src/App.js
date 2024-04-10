@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import axios from 'axios';
-import ListGroup from './components/ListGroup';
+import Home from './components/Home';
+
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
@@ -36,7 +36,7 @@ function App() {
 				<h1>로딩중입니다...</h1>
 			) : (
 				<div className='inner'>
-					<ListGroup data={data}/>
+					<Home data={data} />
 				</div>
 			)}
 		</div>

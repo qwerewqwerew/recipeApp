@@ -1,7 +1,8 @@
-const Title = ({ title }) => {
+const Title = (props) => {
 	return (
 		<>
-			<h2 style={{ fontSize: '30px', color: '#ff5722', padding: '10px', fontWeight: '900' }}>{title}</h2>
+			{props.h1 && <h2 className='h1'>{props.h1}</h2>}
+			{props.h2 && <h2 className='h2'>{props.h2}</h2>}
 		</>
 	);
 };

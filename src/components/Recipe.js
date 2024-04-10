@@ -1,4 +1,3 @@
-import './Recipe.css';
 const Recipe = ({ name, img_s, img_l, cate }) => {
 	return (
 		<>

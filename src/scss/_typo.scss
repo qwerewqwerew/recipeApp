@@ -1,0 +1,60 @@
+@import './init';
+
+h1,
+.h1 {
+	font-size: 4.5rem;
+	letter-spacing: -0.4px;
+	color: $shade1;
+	font-weight: 700;
+	@include align;
+	@include padding(0, 4vw, 0, 4vw);
+}
+h2,
+.h2 {
+	font-size: 3.6rem;
+	letter-spacing: -0.4px;
+	color: $shade1;
+	font-weight: 700;
+	@include align(left);
+	@include padding(4vw, 4vw, 0, 4vw);
+}
+h3,
+.h3 {
+	font-size: 3.2rem;
+	letter-spacing: -0.4px;
+	color: $shade1;
+	font-weight: 700;
+}
+h4,
+.h4 {
+	font-size: 3.2rem;
+	letter-spacing: -0.4px;
+	color: $shade1;
+	font-weight: 700;
+}
+h5,
+.h5 {
+	font-size: 2.4rem;
+	letter-spacing: -0.4px;
+	color: $shade1;
+	font-weight: 700;
+}
+a,
+.body_lg {
+	font-size: 1.6rem;
+	letter-spacing: -0.4px;
+	color: $shade3;
+	font-weight: 500;
+}
+.body_md {
+	font-size: 1.4rem;
+	letter-spacing: 0px;
+	color: $shade6;
+	font-weight: 400;
+}
+.body_sm {
+	font-size: 1.4rem;
+	letter-spacing: 0px;
+	color: $shade3;
+	font-weight: 600;
+}
