@@ -4,8 +4,8 @@ const Recipe = ({ name, img_s, img_l, cate }) => {
 			<div className='list'>
 				<img src={img_s} alt={name} />
 				<div className='text_wrap'>
-					<span className='title_txt'>{name}</span>
-					<span className='sub_txt'>{cate}</span>
+					<span className='body_lg'>{name}</span>
+					<span className='body_sm badge'>{cate}</span>
 				</div>
 			</div>
 		</>

@@ -17,11 +17,11 @@ $breakpoints: (
 @mixin media($size) {
 	$query: map-get($breakpoints, $size);
 	$min-width: map-get($query, min-width);
-	@media (min-width: #{$min-width}) {
+	@media (min-width: #{$min-width})  {
 		@content;
 	}
 }
-@mixin fx($d: row, $just: space-evenly, $align: center, $g: 1rem) {
+@mixin df($d: row, $just: space-evenly, $align: center, $g: 1rem) {
 	display: flex;
 	flex-direction: $d;
 	justify-content: $just;
@@ -29,8 +29,11 @@ $breakpoints: (
 	gap: $g;
 	@content;
 }
-@mixin item($a, $b, $c) {
-	flex: $a $b $c;
+@mixin item($c: 50%, $a: 1, $b: 1) {
+	flex-shrink: $a;
+	flex-grow: $b;
+	flex-basis: $c;
+
 	@content;
 }
 @mixin padding($l: auto, $t: auto, $r: auto, $b: auto) {
@@ -49,7 +52,7 @@ $text1: #0a2533;
 $text2: #353535;
 $stroke: #e6ebf2;
 $bg: #f1f5f5;
-$grayl: hsl(214, 14%, 64%);
+$gray1: hsl(214, 14%, 64%);
 $gray2: #748189;
 $white: #fff;
 $black: #000;
@@ -63,8 +66,10 @@ $shade1: #101314;
 $tint1: #a5babb;
 $tint2: #d5dcdd;
 $tint3: #fafafa;
-$n10: 10;
+$per10: 10%;
 $xunit: 100vw;
+$rem: 8rem;
+$ff: 'Pretendard', sans-serif;
 
 html,
 a {
