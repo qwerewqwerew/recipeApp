@@ -6,17 +6,7 @@ body {
 	margin: auto;
 	box-sizing: border-box;
 	@include media('sm') {
-		width: calc(100% - 2vw);
-		padding: 2vw;
-	}
-	@include media('md') {
-		width: calc(100% - 4vw);
-		padding: 1vw 2vw;
-	}
-	@include media('lg') {
-		width: calc(100% - 10vw);
-		max-width: 1000px;
-		padding: 5vw;
+		width: min(calc(100% - 2vw),$mobile)
 	}
 }
 

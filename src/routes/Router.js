@@ -2,8 +2,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from '../components/Home';
 import CategoryPage from '../components/CategoryPage';
 
-const css = { fontSize: '3rem', maxWidth: '500px', margin: 'auto', display: 'flex', gap: '2rem' };
-
 const Router = () => {
 	return (
 		<>
@@ -17,12 +15,10 @@ const Router = () => {
 };
 const Anchor = () => {
 	return (
-		<div style={css}>
+		<div>
 			<Link to={'/'}>Home</Link>
-			<Link to={'/diary'}>Diary</Link>
-			<Link to={'/edit'}>Edit</Link>
-			<Link to={'/new'}>New</Link>
+			<Link to={'/category/:part'}>category</Link>
 		</div>
 	);
 };
-export { Router };
+export { Router, Anchor };
