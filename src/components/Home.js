@@ -1,12 +1,13 @@
 import Category from './Category';
 
+
 const Home = () => {
 	return (
-		<div className='inner'>
-			<div className='group'>
-				<Category />
+		<>
+			<div className='home'>
+					<Category />
 			</div>
-		</div>
+		</>
 	);
 };
 

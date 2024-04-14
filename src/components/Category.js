@@ -9,14 +9,16 @@ const Category = () => {
 	}
 
 	return (
-		<div className='type'>
+		<div className='category'>
 			{data.map((item) => {
 				return (
 					<Fragment key={item.category}>
-						<Title h1={item.category} />
-						<List item={item.byType} />
+						<div className='inner'>
+							<Title h2={item.category} />
+							<List item={item.byType} />
+						</div>
 					</Fragment>
-				)
+				);
 			})}
 		</div>
 	);

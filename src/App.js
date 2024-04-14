@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home from './components/Home';
+import Title from './components/Title';
 import { RecipeContext } from './context/RecipeContext';
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -42,7 +43,10 @@ function App() {
 
 	return (
 		<RecipeContext.Provider value={filterdata}>
-			<div className='App'>{loading ? <h1>로딩중입니다...</h1> : <Home />}</div>
+			<div className='App'>
+				<Title h1='천만개의 레시피' />
+				{loading ? <h1>로딩중입니다...</h1> : <Home />}
+			</div>
 		</RecipeContext.Provider>
 	);
 }

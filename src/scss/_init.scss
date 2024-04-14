@@ -1,58 +1,14 @@
+@charset "utf-8";
 @import url(https://qwerewqwerew.github.io/source/style/reset.css);
-$mobile: 568px;
-$tablet: 768px;
-$desktop: 992px;
-$breakpoints: (
-	'sm': (
-		min-width: $mobile,
-	),
-	'md': (
-		min-width: $tablet,
-	),
-	'lg': (
-		min-width: $desktop,
-	),
-);
-
-@mixin media($size) {
-	$query: map-get($breakpoints, $size);
-	$min-width: map-get($query, min-width);
-	@media (min-width: #{$min-width})  {
-		@content;
-	}
-}
-@mixin df($d: row, $just: space-evenly, $align: center, $g: 1rem) {
-	display: flex;
-	flex-direction: $d;
-	justify-content: $just;
-	align-items: $align;
-	gap: $g;
-	@content;
-}
-@mixin item($c: 50%, $a: 1, $b: 1) {
-	flex-shrink: $a;
-	flex-grow: $b;
-	flex-basis: $c;
-
-	@content;
-}
-@mixin padding($l: auto, $t: auto, $r: auto, $b: auto) {
-	padding-left: $l;
-	padding-top: $t;
-	padding-right: $r;
-	padding-bottom: $b;
-}
-@mixin align($a: center) {
-	text-align: $a;
-	@content;
-}
+// =====================================================
+// 변수
 
 $primary: #70b9be;
 $text1: #0a2533;
 $text2: #353535;
 $stroke: #e6ebf2;
 $bg: #f1f5f5;
-$gray1: hsl(214, 14%, 64%);
+$gray1: #96a1b0;
 $gray2: #748189;
 $white: #fff;
 $black: #000;
@@ -66,11 +22,81 @@ $shade1: #101314;
 $tint1: #a5babb;
 $tint2: #d5dcdd;
 $tint3: #fafafa;
-$per10: 10%;
-$xunit: 100vw;
-$rem: 8rem;
+$rem: 0.8rem;
 $ff: 'Pretendard', sans-serif;
+$mobile: 0px;
+$tablet: 768px;
+$desktop: 992px;
 
+$breakpoints: (
+	'sm': (
+		min-width: $mobile,
+		max-width: $tablet - 1px,
+	),
+	'md': (
+		min-width: $tablet,
+		max-width: $desktop - 1px,
+	),
+	'lg': (
+		min-width: $desktop,
+	),
+);
+
+@mixin media($size) {
+	$query: map-get($breakpoints, $size);
+	$min-width: map-get($query, min-width);
+	$max-width: map-get($query, max-width);
+
+	@if $min-width and $max-width {
+		@media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+			@content;
+		}
+	} @else if $min-width {
+		@media (min-width: #{$min-width}) {
+			@content;
+		}
+	} @else if $max-width {
+		@media (max-width: #{$max-width}) {
+			@content;
+		}
+	}
+}
+// =====================================================
+// Component
+
+@mixin df($d: row, $just: space-evenly, $align: center, $g: 1rem) {
+	display: flex;
+	flex-direction: $d;
+	justify-content: $just;
+	align-items: $align;
+	gap: $g;
+	@content;
+}
+@mixin item($c: 50%, $a: 1, $b: 1) {
+	flex-shrink: $a;
+	flex-grow: $b;
+	flex-basis: $c;
+	@content;
+}
+@mixin padding($l: auto, $t: auto, $r: auto, $b: auto) {
+	padding-left: $l;
+	padding-top: $t;
+	padding-right: $r;
+	padding-bottom: $b;
+}
+@mixin font($s: 1.6rem, $w: 500, $c: $text2, $a: left, $f: $ff) {
+	font-family: $f;
+	font-size: $s;
+	font-weight: $w;
+	color: $c;
+	text-align: $a;
+	@content;
+}
+%cut {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
 html,
 a {
 	-webkit-font-smoothing: antialiased;
