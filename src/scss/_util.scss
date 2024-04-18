@@ -1,0 +1,23 @@
+// =====================================================
+// button
+button {
+	outline: none;
+	border-radius: 6rem;
+	border: 1px solid transparent;
+	@include padding(3.6rem, 1.3rem, 3.6rem, 1.3rem);
+	&.fill {
+		background: $primary;
+		@include font(2.4rem, 400, $white, center);
+	}
+	&.gray {
+		background: $gray1;
+		@include font(2.4rem, 400, $white, center);
+	}
+}
+
+// =====================================================
+// input
+
+input {
+
+}
