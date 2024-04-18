@@ -22,7 +22,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build -r https://github.com/qwerewqwerew/recipeApp.git"
+		"deploy": "gh-pages -d build -r https://github.com/qwerewqwerew/recipeApp.git/"
 	},
 	"eslintConfig": {
 		"extends": [
