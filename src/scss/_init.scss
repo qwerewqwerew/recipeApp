@@ -14,7 +14,7 @@ $white: #fff;
 $black: #000;
 $shade7: #709799;
 $shade6: #5f8486;
-$shade5: #52696b;
+$shade5: #636c6d;
 $shade4: #435556;
 $shade3: #313e3f;
 $shade2: #222a2a;
@@ -92,20 +92,32 @@ $breakpoints: (
 	text-align: $a;
 	@content;
 }
+@mixin psudo() {
+	content: '';
+	position: absolute;
+	@content;
+}
 %cut {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
-html,
-a {
+
+html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Pretendard', sans-serif;
 }
-body,
-a {
+body {
 	line-height: 1.75;
+	font-size: 1.6rem;
+	text-decoration: none;
+}
+
+a {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Pretendard', sans-serif;	line-height: 1.75;
 	font-size: 1.6rem;
 	text-decoration: none;
 }
