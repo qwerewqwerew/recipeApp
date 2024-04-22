@@ -16,9 +16,11 @@
      ├─── components/ (UI요소를 리턴하는 컴포넌트파일)
      │		│
      │		├─── Home.js 메인컴포넌트
+     │		├─── CategoryPage.js api 서버와 통신하여 카테고리 데이터 전달
      │		├─── Category.js 카테고리 컴포넌트
      │		├─── List.js 리스팅컴포넌트
      │		├─── Title.js 제목컴포넌트
+     │		└─── DetailApi.js api 서버와 통신하여 상세정보 데이터 전달
      │		└─── Detail.js 상세정보 컴포넌트
      │
      └─── routes /  (라우팅 설정 파일)
