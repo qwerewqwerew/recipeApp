@@ -13,7 +13,7 @@ const DetailPage = () => {
 		const fetchData = async () => {
 			try {
 				const { url, key, service, filetype, start, end } = {
-					url: 'https://openapi.foodsafetykorea.go.kr/api/',
+					url: 'http://openapi.foodsafetykorea.go.kr/api/',
 					key: '08cc9b42270a4439b1b5/',
 					service: 'COOKRCP01/',
 					filetype: 'json/',
