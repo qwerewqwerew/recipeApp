@@ -8,7 +8,7 @@ function App() {
 			setLoading(false);
 		}, 500);
 	}, []);
-	return <div className='App'>{loading ? <h1>로딩중입니다...</h1> : <h1> 요리에몽</h1>}</div>;
+	return <div className='App'>{loading ? <h1>로딩중입니다...</h1> : <h1>도레미레시피</h1>}</div>;
 }
 
 export default App;

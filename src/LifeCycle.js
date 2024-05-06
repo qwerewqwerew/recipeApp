@@ -5,10 +5,10 @@ const Time = () => {
 	let [day, setDay] = useState(now);
 
 	useEffect(() => {
-		const stop=setInterval(() => {
+		const stop = setInterval(() => {
 			setDay(new Date().toLocaleString());
 		}, 1000);
-		return clearInterval(stop)
+		return clearInterval(stop);
 	}, []);
 	console.log(day);
 
@@ -50,7 +50,7 @@ function LifeCycle() {
 			<button onClick={() => setTime(time + 1)}>click</button>
 			<input
 				style={{ display: 'block' }}
-				type='text'
+				type="text"
 				value={input}
 				onChange={(e) => {
 					setInput(e.target.value);
