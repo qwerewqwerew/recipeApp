@@ -1,0 +1,35 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	width: min(25%, 20rem);
+}
+.list img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.list-txt-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0.5vw 0 1vw;
+}
+.list-txt-title {
+	width: 100%;
+	font-size: min(2rem, 1vw);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #555;
+}
+.list-txt-way {
+	font-size: 1.4rem;
+	z-index: 99;
+	margin-top: -6rem;
+	background: #555;
+	color: #fff;
+	padding: 4px;
+	border-radius: 3px;
+	align-self:flex-end ;
+	white-space: nowrap;
+}

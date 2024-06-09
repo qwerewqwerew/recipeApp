@@ -1,0 +1,7 @@
+.error {
+	width: 100vw;
+	height: 100vh;
+	font-size: 5vw;
+	color: white;
+	background-color: #ff0000;
+}

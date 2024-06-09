@@ -1,0 +1,9 @@
+ul {
+	padding: 1rem;
+	display: flex;
+	position: fixed;
+  bottom:0;
+	list-style: none;
+	gap: 2rem;
+	background-color: pink;
+}
