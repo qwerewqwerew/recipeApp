@@ -12,7 +12,7 @@ function App() {
 			try {
 				const { url, key, service, filetype, start, end } = {
 					url: 'https://openapi.foodsafetykorea.go.kr/api/',
-					key: '08cc9b42270a4439b1b5/',
+					key: process.env.REACT_APP_KEY,
 					service: 'COOKRCP01/',
 					filetype: 'json/',
 					start: '1/',
