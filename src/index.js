@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import './common.scss';
+import './scss/common.scss';
 import 'material-icons/iconfont/material-icons.css';
 import App from './App';
 
